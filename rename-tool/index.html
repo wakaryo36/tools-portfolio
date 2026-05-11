@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ファイル名一括変更ツール</title>
+    <link rel="stylesheet" href="../text-tool/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>ファイル名一括変更ツール</h1>
+        <p class="subtitle">画像ファイルを安全に一括でリネームする Python ツールです。</p>
+
+        <div class="result">
+            <div class="result-card">
+                <p class="result-label">対象</p>
+                <p class="result-value">画像のみ</p>
+            </div>
+
+            <div class="result-card">
+                <p class="result-label">入力</p>
+                <p class="result-value">先頭名</p>
+            </div>
+
+            <div class="result-card">
+                <p class="result-label">確認</p>
+                <p class="result-value">y / n</p>
+            </div>
+
+            <div class="result-card">
+                <p class="result-label">安全性</p>
+                <p class="result-value">上書き防止</p>
+            </div>
+        </div>
+
+        <h2>このツールでできること</h2>
+        <ul>
+            <li>画像ファイルだけを対象にして一括変更</li>
+            <li>好きな先頭名を入力して連番でリネーム</li>
+            <li>変更前に予定を確認</li>
+            <li>同じ名前のファイルがある場合は中止</li>
+        </ul>
+
+        <h2>変更例</h2>
+        <div class="result-card">
+            <p><strong>変更前</strong></p>
+            <p>a.jpg / b.png / c.jpg</p>
+            <p><strong>変更後</strong></p>
+            <p>photo_001.jpg / photo_002.png / photo_003.jpg</p>
+        </div>
+
+        <h2>工夫したポイント</h2>
+        <ul>
+            <li>.DS_Store などの不要ファイルを除外</li>
+            <li>拡張子を小文字化して判定</li>
+            <li>空入力なら処理を中止</li>
+            <li>実行前に確認メッセージを表示</li>
+            <li>同名ファイルがあれば上書きせず中止</li>
+        </ul>
+
+        <h2>使用技術</h2>
+        <div class="result-card">
+            <p>Python / os / sys / ループ / 条件分岐 / 文字列操作</p>
+        </div>
+
+        <a href="../index.html" class="back-link">← トップへ戻る</a>
+    </div>
+</body>
+</html>
