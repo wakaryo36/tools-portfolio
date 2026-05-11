@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>見積もりツール</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header class="page-header">
+            <h1>見積もり作成ツール</h1>
+            <p class="subtitle">
+                副業用の見積もりを想定して、項目選択・数量入力・値引き・税込計算・見積もり文の自動生成までできるようにしたツールです。
+            </p>
+        </header>
+
+        <section class="card">
+            <h2 class="section-title">作業項目</h2>
+
+            <div class="estimate-item">
+                <label class="item-label">
+                    <input type="checkbox" class="item" data-name="デザイン" data-price="10000">
+                    <span>デザイン</span>
+                    <span class="price-text">10,000円</span>
+                </label>
+                <input type="number" class="quantity" min="1" value="1">
+            </div>
+
+            <div class="estimate-item">
+                <label class="item-label">
+                    <input type="checkbox" class="item" data-name="コーディング" data-price="20000">
+                    <span>コーディング</span>
+                    <span class="price-text">20,000円</span>
+                </label>
+                <input type="number" class="quantity" min="1" value="1">
+            </div>
+
+            <div class="estimate-item">
+                <label class="item-label">
+                    <input type="checkbox" class="item" data-name="レスポンシブ対応" data-price="5000">
+                    <span>レスポンシブ対応</span>
+                    <span class="price-text">5,000円</span>
+                </label>
+                <input type="number" class="quantity" min="1" value="1">
+            </div>
+        </section>
+
+        <section class="card">
+            <h2 class="section-title">値引き設定</h2>
+            <div class="discount-box">
+                <label for="discount">値引き額</label>
+                <input type="number" id="discount" min="0" value="0">
+            </div>
+        </section>
+
+        <section class="card">
+            <h2 class="section-title">内訳</h2>
+            <ul id="breakdownList" class="breakdown-list"></ul>
+        </section>
+
+        <section class="card summary-card">
+            <h2 class="section-title">見積もり結果</h2>
+            <div class="summary-row">
+                <span>小計</span>
+                <span><span id="subtotal">0</span> 円</span>
+            </div>
+            <div class="summary-row">
+                <span>値引き</span>
+                <span><span id="discountAmount">0</span> 円</span>
+            </div>
+            <div class="summary-row">
+                <span>値引き後小計</span>
+                <span><span id="discountedSubtotal">0</span> 円</span>
+            </div>
+            <div class="summary-row">
+                <span>消費税（10%）</span>
+                <span><span id="tax">0</span> 円</span>
+            </div>
+            <div class="summary-row total-row">
+                <span>合計</span>
+                <span><span id="total">0</span> 円</span>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2 class="section-title">備考</h2>
+            <textarea id="note" rows="4" placeholder="例：修正は2回まで対応します。納期は7日程度です。"></textarea>
+        </section>
+
+        <section class="card">
+            <h2 class="section-title">見積もり文</h2>
+            <textarea id="output" rows="10" readonly></textarea>
+            <button id="copyBtn">コピーする</button>
+        </section>
+
+        <section class="card">
+            <h2 class="section-title">工夫したポイント</h2>
+            <p>
+                副業で実際に使うことを想定して、見積もりの分かりやすさと使いやすさを意識して作成しました。
+            </p>
+            <ul>
+                <li>項目ごとの内訳が分かるようにして、見積もりの根拠が伝わるようにした</li>
+                <li>値引き額が小計を超えないようにして、マイナス金額にならないようにした</li>
+                <li>消費税を自動計算できるようにして、最終金額がすぐ分かるようにした</li>
+                <li>見積もり文を自動生成し、そのままコピーして使えるようにした</li>
+            </ul>
+        </section>
+
+        <a href="../index.html" class="back-link">← トップへ戻る</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
