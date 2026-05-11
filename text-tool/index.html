@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字数＆文章整形ツール</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>文字数＆文章整形ツール</h1>
+        <p class="subtitle">文章の文字数を確認して、整形できます。</p>
+
+        <textarea id="textInput" placeholder="ここに文章を入力してください"></textarea>
+        
+        <div class="button-group">
+            <button id="countButton">文字数を確認</button>
+            <button id="removeSpacesButton">空白を削除</button>
+            <button id="removeLineBreaksButton">改行を削除</button>
+            <button id="normalizeBlankLinesButton">空行を整理</button>
+            <button id="trimButton">前後の空白を削除</button>
+            <button id="copyButton">コピー</button>
+            <button id="resetButton" class="sub-button">リセット</button>
+        </div>
+
+        <div class="result">
+            <div class="result-card">
+                <p class="result-label">文字数</p>
+                <p class="result-value" id="charCount">0</p>
+            </div>
+            
+            <div class="result-card">
+                <p class="result-label">空白なし文字数</p>
+                <p class="result-value" id="noSpaceCount">0</p>
+            </div>
+
+            <div class="result-card">
+                <p class="result-label">改行なし文字数</p>
+                <p class="result-value" id="noLineBreakCount">0</p>
+            </div>
+
+            <div class="result-card">
+                <p class="result-label">単語数</p>
+                <p class="result-value" id="wordCount">0</p>
+            </div>
+        </div>
+
+        <section class="card">
+            <h2 class="section-title">工夫したポイント</h2>
+            <p>
+                日常の文章作成やコーディング時のテキスト整理を効率化するために作成しました。
+            </p>
+            <ul>
+                <li>ボタンごとに機能を分けて、直感的に操作できるようにした</li>
+                <li>文字数・空白なし・改行なしなど複数の指標を同時に確認できるようにした</li>
+                <li>入力内容に対してすぐ結果が分かるように設計した</li>
+                <li>文章整形（空白削除・改行整理など）をワンクリックで行えるようにした</li>
+                <li>コピー・リセット機能を追加して作業効率を上げた</li>
+            </ul>
+        </section>
+
+        <a href="../index.html" class="back-link">← トップへ戻る</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
