@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 24px;
+    font-family: Arial, sans-serif;
+    background: #f4f6fb;
+    color: #222;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+.subtitle {
+    color: #666;
+    line-height: 1.6;
+}
+
+.input-area {
+    display: flex;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 10px 12px;
+    font-size: 16px;
+}
+
+#addButton {
+    padding: 10px 16px;
+    font-size: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #222;
+    color: #fff;
+    cursor: pointer;
+}
+
+#taskList {
+    padding-left: 20px;
+}
+
+#taskList li {
+    margin-bottom: 10px;
+}
+
+#taskList li span {
+    margin-right: 10px;
+}
+
+#taskList li button {
+    margin-left: 8px;
+    padding: 4px 8px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.done {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.filter-area {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.filter-area button {
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.filter-area button.active {
+    background: #222;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}

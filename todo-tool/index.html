@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoアプリ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+    <!-- ToDo本体 -->
+    <section class="card">
+        <h1>ToDoアプリ</h1>
+        <p class="subtitle">タスクを追加して管理できるシンプルなアプリです。</p>
+
+        <div class="input-area">
+            <input type="text" id="taskInput" placeholder="やることを入力してください">
+            <button id="addButton">追加</button>
+        </div>
+
+        <div class="filter-area">
+            <button id="showAll">すべて</button>
+            <button id="showActive">未完了</button>
+            <button id="showCompleted">完了</button>
+        </div>
+
+        <ul id="taskList"></ul>
+
+        <a href="../index.html" class="back-link">← トップへ戻る</a>
+    </section>
+
+    <!-- 工夫したポイント -->
+    <section class="card">
+        <h2>工夫したポイント</h2>
+        <ul>
+            <li>localStorageでデータを保存し、ページ更新後も状態を維持</li>
+            <li>クラスで状態管理し、見た目とロジックを分離</li>
+            <li>フィルター機能でタスクの可視性を向上</li>
+        </ul>
+    </section>
+
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
