@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV整理ツール</title>
+    <link rel="stylesheet" href="../text-tool/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>CSV整理ツール</h1>
+        <p class="subtitle">CSVの列選択・空行削除・並び替え・重複削除ができる Python ツールです。</p>
+
+        <div class="result">
+            <div class="result-card">
+                <p class="result-label">列選択</p>
+                <p class="result-value">対応</p>
+            </div>
+
+            <div class="result-card">
+                <p class="result-label">空行削除</p>
+                <p class="result-value">対応</p>
+            </div>
+
+            <div class="result-card">
+                <p class="result-label">並び替え</p>
+                <p class="result-value">対応</p>
+            </div>
+
+            <div class="result-card">
+                <p class="result-label">重複削除</p>
+                <p class="result-value">対応</p>
+            </div>
+        </div>
+
+        <h2>このツールでできること</h2>
+        <ul>
+            <li>残したい列を番号で選べる</li>
+            <li>空行を自動でスキップできる</li>
+            <li>指定した列で並び替えできる</li>
+            <li>重複データを削除できる</li>
+            <li>整理後のCSVを新しいファイルとして保存できる</li>
+        </ul>
+
+        <h2>使用例</h2>
+        <div class="result-card">
+            <p><strong>入力CSV</strong></p>
+            <p>名前,年齢,住所,電話番号</p>
+            <p>田中,25,東京,090</p>
+            <p>佐藤,30,大阪,080</p>
+            <p>田中,25,東京,090</p>
+        </div>
+
+        <div class="result-card" style="margin-top: 16px;">
+            <p><strong>出力CSV</strong></p>
+            <p>名前,住所</p>
+            <p>田中,東京</p>
+            <p>佐藤,大阪</p>
+        </div>
+
+        <h2>工夫したポイント</h2>
+        <ul>
+            <li>入力が空なら処理を終了</li>
+            <li>列番号が範囲外なら処理を終了</li>
+            <li>数字以外が入った時はエラー表示</li>
+            <li>行の長さが足りない場合は空文字で補完</li>
+        </ul>
+
+        <h2>使用技術</h2>
+        <div class="result-card">
+            <p>Python / csv / sys / for文 / if文 / リスト / 条件分岐</p>
+        </div>
+
+        <a href="../index.html" class="back-link">← トップへ戻る</a>
+    </div>
+</body>
+</html>
